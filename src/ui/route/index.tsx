@@ -4,7 +4,10 @@ import {
   useNavigate,
 } from "@typeroute/router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {
+  SafeAreaProvider,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 
 import { routes } from "./routes";
 
@@ -42,10 +45,12 @@ function BottomMenu() {
 
 export function AppTabsLayout() {
   return (
-    <View style={styles.container}>
-      <RouterRoot routes={routes} />
-      <BottomMenu />
-    </View>
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        <RouterRoot routes={routes} />
+        <BottomMenu />
+      </View>
+    </SafeAreaProvider>
   );
 }
 
