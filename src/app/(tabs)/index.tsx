@@ -1,5 +1,5 @@
-import { HomeScreen } from "@/ui/screens/Home/HomeScreen";
+import { Home } from "@/ui/components/Home/Home";
 
 export default function HomeRoute() {
-  return <HomeScreen />;
+  return <Home></Home>;
 }

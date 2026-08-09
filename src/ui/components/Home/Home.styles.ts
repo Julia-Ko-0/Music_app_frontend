@@ -15,5 +15,4 @@ export const styles = StyleSheet.create({
     fontSize: typography.title,
     color: colors.textPrimary,
   },
-  text: {},
 });
