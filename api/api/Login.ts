@@ -20,7 +20,7 @@ export class Login<
   SecurityDataType = unknown,
 > extends HttpClient<SecurityDataType> {
   /**
-   * @description Authorization and token retrieval
+   * @description Авторизация и получение токена
    *
    * @name LoginForAccessTokenLoginPost
    * @summary Login For Access Token

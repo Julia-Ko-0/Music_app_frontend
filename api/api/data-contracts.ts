@@ -10,6 +10,12 @@
  * ---------------------------------------------------------------
  */
 
+/** Body_bulk_upload_tracks_tracks_bulk_upload__post */
+export interface BodyBulkUploadTracksTracksBulkUploadPost {
+  /** Files */
+  files: (File | Blob)[];
+}
+
 /** Body_login_for_access_token_login_post */
 export interface BodyLoginForAccessTokenLoginPost {
   /** Grant Type */
@@ -47,6 +53,29 @@ export interface HTTPValidationError {
   detail?: ValidationError[];
 }
 
+/** PlaylistCreate */
+export interface PlaylistCreate {
+  /** Title */
+  title: string;
+  /**
+   * Is Public
+   * @default false
+   */
+  is_public?: boolean | null;
+}
+
+/** PlaylistResponse */
+export interface PlaylistResponse {
+  /** Id */
+  id: number;
+  /** Title */
+  title: string;
+  /** Is Public */
+  is_public: boolean;
+  /** Owner Id */
+  owner_id: number;
+}
+
 /** TrackResponse */
 export interface TrackResponse {
   /** Id */
@@ -57,6 +86,14 @@ export interface TrackResponse {
   artist: string;
   /** Owner Id */
   owner_id: number;
+}
+
+/** TrackUpdate */
+export interface TrackUpdate {
+  /** Title */
+  title?: string | null;
+  /** Artist */
+  artist?: string | null;
 }
 
 /** UserCreate */

@@ -20,7 +20,7 @@ export class Upload<
   SecurityDataType = unknown,
 > extends HttpClient<SecurityDataType> {
   /**
-   * @description Uploads an audio file to MinIO, reads tags, and creates a database record.
+   * @description Загрузка аудио файла в MinIO, читает тэги и создаёт запись в БД.
    *
    * @name UploadTrackUploadPost
    * @summary Upload Track

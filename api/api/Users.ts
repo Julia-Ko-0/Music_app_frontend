@@ -10,22 +10,25 @@
  * ---------------------------------------------------------------
  */
 
+import { TrackResponse } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class SyncStorage<
+export class Users<
   SecurityDataType = unknown,
 > extends HttpClient<SecurityDataType> {
   /**
-   * @description Сканирование MinIO на файлы, которых нет в БД и добавляет их.
+   * @description Получить список всех лайкнутых треков текущего пользователя.
    *
-   * @name SyncMinioToDbSyncStoragePost
-   * @summary Sync Minio To Db
-   * @request POST:/sync-storage/
+   * @name GetLikedTracksUsersMeLikesGet
+   * @summary Get Liked Tracks
+   * @request GET:/users/me/likes
+   * @secure
    */
-  syncMinioToDbSyncStoragePost = (params: RequestParams = {}) =>
-    this.request<any, any>({
-      path: `/sync-storage/`,
-      method: "POST",
+  getLikedTracksUsersMeLikesGet = (params: RequestParams = {}) =>
+    this.request<TrackResponse[], any>({
+      path: `/users/me/likes`,
+      method: "GET",
+      secure: true,
       format: "json",
       ...params,
     });

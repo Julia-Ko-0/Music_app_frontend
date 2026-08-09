@@ -17,7 +17,7 @@ export class Register<
   SecurityDataType = unknown,
 > extends HttpClient<SecurityDataType> {
   /**
-   * @description New user registration
+   * @description Регистрация нового пользователя
    *
    * @name RegisterUserRegisterPost
    * @summary Register User

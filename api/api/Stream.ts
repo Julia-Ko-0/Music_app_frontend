@@ -17,7 +17,7 @@ export class Stream<
   SecurityDataType = unknown,
 > extends HttpClient<SecurityDataType> {
   /**
-   * @description Streams the audio file from MinIO with dynamic media_type.
+   * @description Выполняет потоковую передачу аудиофайла из MinIO с динамическим определением media_type и поддержкой Range-запросов..
    *
    * @name StreamTrackStreamTrackIdGet
    * @summary Stream Track
