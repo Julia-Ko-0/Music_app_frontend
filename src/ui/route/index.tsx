@@ -1,8 +1,4 @@
-import {
-  RouterRoot,
-  useLocation,
-  useNavigate,
-} from "@typeroute/router";
+import { RouterRoot, useLocation, useNavigate } from "@typeroute/router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import {
   SafeAreaProvider,
@@ -33,9 +29,7 @@ function BottomMenu() {
         onPress={() => navigate({ to: routes.library })}
         style={[styles.button, path === "/library" && styles.activeButton]}
       >
-        <Text
-          style={[styles.label, path === "/library" && styles.activeLabel]}
-        >
+        <Text style={[styles.label, path === "/library" && styles.activeLabel]}>
           Медиатека
         </Text>
       </Pressable>

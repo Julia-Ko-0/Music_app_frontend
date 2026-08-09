@@ -1,3 +1,5 @@
-import { AppTabsLayout } from "@/ui/route";
+import { Stack } from "expo-router";
 
-export default AppTabsLayout;
+export default function Layout() {
+  return <Stack />;
+}
